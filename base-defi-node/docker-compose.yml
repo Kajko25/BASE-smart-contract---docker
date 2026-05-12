@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  hardhat:
+    build: .
+    container_name: base-hardhat
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    tty: true
