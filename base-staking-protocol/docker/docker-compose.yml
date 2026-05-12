@@ -1,1 +1,23 @@
+version: '3.8'
 
+services:
+  hardhat:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: base-staking-hardhat
+    volumes:
+      - ..:/app
+    env_file:
+      - ../.env
+    ports:
+      - "8545:8545"     # Hardhat Network (jeśli chcesz lokalny node)
+    command: sh -c "npm run compile && tail -f /dev/null"   # trzyma kontener uruchomiony
+
+  # Opcjonalnie: lokalny Anvil (szybszy do testów)
+  # anvil:
+  #   image: ghcr.io/foundry-rs/foundry:latest
+  #   container_name: anvil-base
+  #   command: anvil --port 8545 --chain-id 84532
+  #   ports:
+  #     - "8545:8545"
