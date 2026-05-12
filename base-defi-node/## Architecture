@@ -1,0 +1,5 @@
+- Hardhat
+- Solidity 0.8.x
+- Dockerized deployment environment
+- Base Mainnet / Base Sepolia support
+- ERC20 deployment scripts
