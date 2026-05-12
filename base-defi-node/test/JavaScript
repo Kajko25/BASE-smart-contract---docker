@@ -1,0 +1,5 @@
+describe("BaseExampleToken", function () {
+  it("Should deploy correctly", async function () {
+    // ...
+  });
+});
