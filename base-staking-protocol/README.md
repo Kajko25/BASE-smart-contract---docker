@@ -11,3 +11,8 @@ DeFi staking protocol deployed on Base network.
 
 ## Networks
 - Base Sepolia
+
+- architecture diagram
+- deployment flow
+- staking mechanism explanation
+- Base network info
