@@ -22,4 +22,4 @@ RUN npx hardhat compile
 # Domyślna komenda
 CMD ["sh"]
 
-BASE
+BASE1
