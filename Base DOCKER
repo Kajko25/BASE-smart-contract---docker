@@ -1,2 +1,23 @@
-Hello Base
-Hello Base 2
+# Base image
+FROM node:20-alpine
+
+# Instalacja dodatkowych pakietów
+RUN apk add --no-cache git bash
+
+# Folder roboczy
+WORKDIR /app
+
+# Kopiowanie package files
+COPY package*.json ./
+
+# Instalacja zależności
+RUN npm install
+
+# Kopiowanie reszty projektu
+COPY . .
+
+# Kompilacja smart contractów
+RUN npx hardhat compile
+
+# Domyślna komenda
+CMD ["sh"]
