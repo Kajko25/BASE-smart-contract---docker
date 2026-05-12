@@ -21,3 +21,4 @@ RUN npx hardhat compile
 
 # Domyślna komenda
 CMD ["sh"]
+heelo1
